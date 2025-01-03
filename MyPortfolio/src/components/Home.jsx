@@ -1,6 +1,14 @@
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
+import insta from "../assets/insta.png"
+import facebook from "../assets/facebook.png"
+import github from "../assets/github.png"
+import email  from "../assets/email.png"
+import download from "../assets/download.png"
+import smartcoding from "../assets/smartcoding.png"
+import bluealien from "../assets/blueAlien.png"
+
 export default function Home() {
     return(
         <>
@@ -17,13 +25,13 @@ export default function Home() {
                         Jeg håper du finner inspirasjon og ser potensialet for samarbeid!
                     </p>
                     <ul className="socials-ul">
-                        <li><img src="../src/assets/insta.png" alt="Instagram link" /></li>
-                        <li><img src="../src/assets/facebook.png" alt="Facebook link" /></li>
-                        <li><img src="../src/assets/github.png" alt="Github link" /></li>
+                        <li><img src={insta} alt="Instagram link" /></li>
+                        <li><img src={facebook} alt="Facebook link" /></li>
+                        <li><img src={github} alt="Github link" /></li>
                     </ul>
                     <section className="contact">
-                        <h3>Ta kontakt <img src="../src/assets/email.png" alt="Email link" /></h3>
-                        <h3>Last ned CV <img src="../src/assets/download.png" alt="CV download button" /></h3>
+                        <h3>Ta kontakt <img src={email} alt="Email link" /></h3>
+                        <h3>Last ned CV <img src={download} alt="CV download button" /></h3>
                     </section>
                     </section>
                     <section className="content-right">
@@ -45,7 +53,7 @@ export default function Home() {
                     <section className="projects-list">
                         <article>
                             <a href="https://mirex420.github.io/adrianmi.github.io/index.html" alt="Link to SmartCoding website" className="project-link">
-                                <img src="../src/assets/smartcoding.jpg" alt="Smartcoding website" />
+                                <img src={smartcoding} alt="Smartcoding website" />
                                 <section className="project-desc">
                                     <h2>SmartCoding</h2>
                                     <p>Nettside for webutviklings emnet</p>
@@ -54,7 +62,7 @@ export default function Home() {
                         </article>
                         <article>
                             <a href="" className="project-link">
-                                <img src="../src/assets/smartcoding.jpg" alt="Smartcoding website" />
+                                <img src={smartcoding} alt="Smartcoding website" />
                                 <section className="project-desc">
                                     <h2>Underveis...</h2>
                                     <p>Tekst her</p>
@@ -63,7 +71,7 @@ export default function Home() {
                         </article>
                         <article>
                         <a href="" className="project-link">
-                            <img src="../src/assets/smartcoding.jpg" alt="Smartcoding website" />
+                            <img src={smartcoding} alt="Smartcoding website" />
                             <section className="project-desc">
                                 <h2>Holder på!</h2>
                                 <p>Tekst her</p>
@@ -72,7 +80,7 @@ export default function Home() {
                         </article>
                         <article>
                         <a href="" className="project-link">
-                            <img src="../src/assets/smartcoding.jpg" alt="Smartcoding website" />
+                            <img src={smartcoding} alt="Smartcoding website" />
                             <section className="project-desc">
                                 <h2>Snart ferdig!</h2>
                                 <p>Tekst her</p>
@@ -84,11 +92,11 @@ export default function Home() {
                 <Footer />
             </main>  
             <div className="spinning-icons">
-                <img src="../src/assets/blueAlien.png" alt="Character 1" class="spinning-icon" />
-                <img src="../src/assets/blueAlien.png" alt="Character 2" class="spinning-icon" />
-                <img src="../src/assets/blueAlien.png" alt="Character 3" class="spinning-icon" />
-                <img src="../src/assets/blueAlien.png" alt="Character 3" class="spinning-icon" />
-                <img src="../src/assets/blueAlien.png" alt="Character 3" class="spinning-icon" />
+                <img src={bluealien} alt="Character 1" class="spinning-icon" />
+                <img src={bluealien} alt="Character 2" class="spinning-icon" />
+                <img src={bluealien}alt="Character 3" class="spinning-icon" />
+                <img src={bluealien} alt="Character 3" class="spinning-icon" />
+                <img src={bluealien} alt="Character 3" class="spinning-icon" />
             </div> 
         </>
     )
