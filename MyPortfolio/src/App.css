@@ -8,7 +8,6 @@ body {
   justify-content: center;
   font-family: "Sixtyfour", serif;
   overflow-x: hidden; 
- 
 }
 ::-webkit-scrollbar {
   display: none;
@@ -43,7 +42,7 @@ body {
         list-style: none;
         padding: 0 0 0 2rem ;
         & :hover {
-          transform: scale(1.2); 
+          transform: scale(1.1); 
         }
         & li {
           transition: transform 0.3s ease;
@@ -65,7 +64,7 @@ body {
         & :hover {
           transform: scale(1.1); 
         }
-        & h3 {
+        & a {
           transition: transform 0.3s ease;
           background-color: white;
           color: black;
@@ -76,6 +75,7 @@ body {
           display: flex;
           align-items: center;
           gap: 1rem;
+          text-decoration: none;
           & img {
             height: auto;
             width: 3rem;
@@ -210,7 +210,7 @@ body {
 }
 .footer-container {
   margin: 4rem 0 2rem 0;
-  background-color: rgb(54, 54, 54);
+  background: linear-gradient(to right, rgb(255, 68, 68), rgb(75, 75, 255));
   border-radius: 0.6rem;
   display: flex;
   flex-direction: row;
@@ -218,7 +218,7 @@ body {
   justify-content: space-between;
   padding: 0 2rem 0 2rem;
   & h2 {
-    background: linear-gradient(to right, rgb(255, 68, 68), rgb(75, 75, 255));
+    background-color: white;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -228,13 +228,18 @@ body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    
     & img {
       height: 4rem;
+    }
+    & .footer-link:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
     }
   }
 }
 .spinning-icons {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -250,32 +255,50 @@ body {
   height: auto;
   opacity: 0.8; /* Slight transparency */
 }
+.spinning-square {
+  position: absolute;
+  animation: spinReversed 100s linear infinite;
+  width: 50rem; /* Adjust size of icons */
+  height: auto;
+  opacity: 0.8; /* Slight transparency */
+}
+.spinning-square:nth-child(1) {
+  top: 70%;
+  left: 80%;
+  animation-duration: 200s; /* Slower spin */
+}
+.spinning-square:nth-child(2) {
+  top: 20%;
+  left: -20%;
+  animation-duration: 200s; /* Slower spin */
+}
+
 
 /* Example of positioning the icons */
-.spinning-icon:nth-child(1) {
+.spinning-icon:nth-child(3) {
   top: 10%;
   left: 5%;
   animation-duration: 12s; /* Slower spin */
 }
 
-.spinning-icon:nth-child(2) {
+.spinning-icon:nth-child(4) {
   top: 50%;
   left: 85%;
   animation-duration: 8s; /* Faster spin */
 }
 
-.spinning-icon:nth-child(3) {
+.spinning-icon:nth-child(5) {
   top: 70%;
   left: 10%;
   animation-duration: 10s; /* Medium speed */
 }
 
-.spinning-icon:nth-child(4) {
+.spinning-icon:nth-child(6) {
   top: 10%;
   left: 50%;
   animation-duration: 10s; /* Medium speed */
 }
-.spinning-icon:nth-child(5) {
+.spinning-icon:nth-child(7) {
   top: 90%;
   left: 60%;
   animation-duration: 9s; /* Medium speed */
@@ -290,6 +313,14 @@ body {
   }
 }
 
+@keyframes spinReversed {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /* Styling for content to make it stand out */
 .main-container {
   position: relative; /* To make sure the spinning icons are positioned relative to this container */
