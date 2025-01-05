@@ -56,9 +56,9 @@ export default function Home() {
                             <LetterByLetter text="Adrian Mirek" speed={90}/>
                         </h1>
                         <p>
-                            Jeg er en lidenskapelig designer/utvikler med fokus på å skape brukervennlige og visuelt tiltalende løsninger. 
-                            Her kan du utforske mitt arbeid og se hvordan jeg kombinerer kreativitet med teknologi for å realisere innovative prosjekter. 
-                            Jeg håper du finner inspirasjon og ser potensialet for samarbeid!
+                            Jeg er en engasjert utvikler og designer som brenner for å skape brukervennlige og estetisk tiltalende løsninger. 
+                            Med erfaring i HTML, CSS, JavaScript og React lager jeg dynamiske og responsive webapplikasjoner. 
+                            Jeg bruker Figma og Adobe-produkter til design og prototyping, samt Maya til 3D-modellering og animasjon.
                         </p>
                         <ul className="socials-ul">
                             <a href="https://www.instagram.com/adrianmirek.03/"><li><img src={insta} alt="Instagram link" /></li></a>
@@ -82,6 +82,9 @@ export default function Home() {
                         <h3>react.js</h3>
                         <h3>figma</h3>
                         <h3>github</h3>
+                        <h3>adobe</h3>
+                        <h3>maya</h3>
+                        <h3>blender</h3>
                     </section> 
                 </section>
                 <section className="projects">
@@ -100,7 +103,7 @@ export default function Home() {
                             <a href="" className="project-link">
                                 <img src={smartcoding} alt="Smartcoding website" />
                                 <section className="project-desc">
-                                    <h2>Underveis...</h2>
+                                    <h2>Tittel</h2>
                                     <p>Tekst her</p>
                                 </section>
                             </a>
@@ -109,7 +112,7 @@ export default function Home() {
                         <a href="" className="project-link">
                             <img src={smartcoding} alt="Smartcoding website" />
                             <section className="project-desc">
-                                <h2>Holder på!</h2>
+                                <h2>Tittel</h2>
                                 <p>Tekst her</p>
                             </section>
                             </a>
@@ -118,7 +121,7 @@ export default function Home() {
                         <a href="" className="project-link">
                             <img src={smartcoding} alt="Smartcoding website" />
                             <section className="project-desc">
-                                <h2>Snart ferdig!</h2>
+                                <h2>Tittel</h2>
                                 <p>Tekst her</p>
                             </section>
                             </a>
