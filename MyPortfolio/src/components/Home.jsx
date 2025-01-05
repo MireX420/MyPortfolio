@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
+
+
+
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
@@ -12,6 +15,7 @@ import bluealien from "../assets/blueAlien.png"
 import square from "../assets/square.png"
 
 
+
 export default function Home() {
 
     const handleScroll = (id) => {
@@ -21,29 +25,50 @@ export default function Home() {
         }
       };
 
+      const LetterByLetter = ({ text, speed = 100 }) => {
+        const [displayedText, setDisplayedText] = useState(""); // Tracks the text being displayed
+        const [index, setIndex] = useState(0); // Tracks the current character index
+      
+        useEffect(() => {
+          if (index < text.length) {
+            const timer = setTimeout(() => {
+              setDisplayedText((prev) => prev + text[index]); // Add the next letter
+              setIndex((prev) => prev + 1); // Move to the next index
+            }, speed);
+      
+            return () => clearTimeout(timer); // Clean up timeout
+          }
+        }, [index, text, speed]);
+      
+        return <span>{displayedText}</span>;
+      };
+
+      
+
     return(
         <>
+        
             <main id="section3" className="main-container">
                 <Navbar onScroll={handleScroll}/>
                 <section className="main-content">
                     <section className="content-left">
-                    <h1>
-                        Adrian Mirek
-                    </h1>
-                    <p>
-                        Jeg er en lidenskapelig designer/utvikler med fokus på å skape brukervennlige og visuelt tiltalende løsninger. 
-                        Her kan du utforske mitt arbeid og se hvordan jeg kombinerer kreativitet med teknologi for å realisere innovative prosjekter. 
-                        Jeg håper du finner inspirasjon og ser potensialet for samarbeid!
-                    </p>
-                    <ul className="socials-ul">
-                        <a href="https://www.instagram.com/adrianmirek.03/"><li><img src={insta} alt="Instagram link" /></li></a>
-                        <a href="https://www.facebook.com/profile.php?id=100011207858650"><li><img src={facebook} alt="Facebook link" /></li></a>
-                        <a href="https://github.com/MireX420"><li><img src={github} alt="Github link" /></li></a>
-                    </ul>
-                    <section className="contact">
-                       <a href="mailto:adrian_mirek@yahoo.no">Ta kontakt <img src={email} alt="Email link" /></a>
-                        <a href="../assets/CV.docx"  download="CV.docx" >Last ned CV <img src={download} alt="CV download button" /></a>
-                    </section>
+                        <h1>
+                            <LetterByLetter text="Adrian Mirek" speed={90}/>
+                        </h1>
+                        <p>
+                            Jeg er en lidenskapelig designer/utvikler med fokus på å skape brukervennlige og visuelt tiltalende løsninger. 
+                            Her kan du utforske mitt arbeid og se hvordan jeg kombinerer kreativitet med teknologi for å realisere innovative prosjekter. 
+                            Jeg håper du finner inspirasjon og ser potensialet for samarbeid!
+                        </p>
+                        <ul className="socials-ul">
+                            <a href="https://www.instagram.com/adrianmirek.03/"><li><img src={insta} alt="Instagram link" /></li></a>
+                            <a href="https://www.facebook.com/profile.php?id=100011207858650"><li><img src={facebook} alt="Facebook link" /></li></a>
+                            <a href="https://github.com/MireX420"><li><img src={github} alt="Github link" /></li></a>
+                        </ul>
+                        <section className="contact">
+                            <a href="mailto:adrian_mirek@yahoo.no">Ta kontakt <img src={email} alt="Email link" /></a>
+                            <a href="../assets/CV.docx"  download="CV.docx" >Last ned CV <img src={download} alt="CV download button" /></a>
+                        </section>
                     </section>
                     <section className="content-right">
                     </section>
@@ -103,14 +128,15 @@ export default function Home() {
                 <Footer onScroll={handleScroll}/>
             </main>  
             <div className="spinning-icons">
-            <img src={square} alt="Square 1" class="spinning-square" />
-            <img src={square} alt="Square 1" class="spinning-square" />
+                <img src={square} alt="Square 1" class="spinning-square" />
+                <img src={square} alt="Square 1" class="spinning-square" />
                 <img src={bluealien} alt="Character 1" class="spinning-icon" />
                 <img src={bluealien} alt="Character 2" class="spinning-icon" />
                 <img src={bluealien}alt="Character 3" class="spinning-icon" />
                 <img src={bluealien} alt="Character 3" class="spinning-icon" />
                 <img src={bluealien} alt="Character 3" class="spinning-icon" />
             </div> 
+           
         </>
     )
 }
