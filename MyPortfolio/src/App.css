@@ -136,7 +136,6 @@ body {
       & article {
         width: 49.6%;
         display: flex;
-        flex-direction: column;
         margin-bottom: 0.6rem;
         & :hover {
           transform: scale(0.95);
@@ -159,12 +158,14 @@ body {
             flex-direction: column;
             padding: 0 0 4rem 2rem;
             & h2 {
-              font-size: 2rem;
+              font-size: 1.6rem;
               margin-bottom: 0.2rem;
-              color: white;
+              color: white;   
             }
             & p {
+              width: 90%;
               font-size: 1rem;
+              line-height: 1.6rem;
               color: rgb(206, 206, 206);
             }
           }
@@ -485,9 +486,12 @@ body {
               pointer-events: none; 
               display: flex;
               flex-direction: column;
+              align-items: center;
               padding: 1rem 0;
               & h2 {
-                font-size: 1.6rem;
+                width: 80%;
+                word-wrap: break-word;
+                font-size: 1.2rem;
                 margin-bottom: 0.2rem;
                 color: white;
               }

@@ -13,6 +13,7 @@ import download from "../assets/download.png"
 import smartcoding from "../assets/smartcoding.png"
 import bluealien from "../assets/blueAlien.png"
 import square from "../assets/square.png"
+import komdes from "../assets/komdes.png"
 
 
 
@@ -100,11 +101,11 @@ export default function Home() {
                             </a>
                         </article>
                         <article>
-                            <a href="" className="project-link">
-                                <img src={smartcoding} alt="Smartcoding website" />
+                            <a href="https://info-wars-git-main-crayhars-projects.vercel.app/" className="project-link">
+                                <img src={komdes} alt="Smartcoding website" />
                                 <section className="project-desc">
-                                    <h2>Tittel</h2>
-                                    <p>Tekst her</p>
+                                    <h2>Kommunikasjonsdesign</h2>
+                                    <p>Nettside for Kommunikasjonsdesign emnet</p>
                                 </section>
                             </a>
                         </article>
