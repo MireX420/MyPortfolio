@@ -85,7 +85,7 @@ export default function Home() {
                         <h3>github</h3>
                         <h3>adobe</h3>
                         <h3>maya</h3>
-                        <h3>blender</h3>
+                        <h3>Node.js</h3>
                     </section> 
                 </section>
                 <section className="projects">
@@ -95,7 +95,7 @@ export default function Home() {
                             <a href="https://mirex420.github.io/adrianmi.github.io/index.html" alt="Link to SmartCoding website" className="project-link">
                                 <img src={smartcoding} alt="Smartcoding website" />
                                 <section className="project-desc">
-                                    <h2>SmartCoding</h2>
+                                    <h2>Webutvikling</h2>
                                     <p>Nettside for webutviklings emnet</p>
                                 </section>
                             </a>
